@@ -88,3 +88,8 @@ set(file_path ${CMAKE_CURRENT_SOURCE_DIR}/../../PPOCR-Rec/model/ppocrv4_rec.rknn
 if (EXISTS ${file_path})
     install(FILES ${file_path} DESTINATION model)
 endif()
+
+set(file_path ${CMAKE_CURRENT_SOURCE_DIR}/../../../run_test.sh)
+if (EXISTS ${file_path})
+    install(FILES ${file_path} DESTINATION .)
+endif()

@@ -47,7 +47,7 @@ if [ -z ${TARGET_SOC} ] || [ -z ${BUILD_DEMO_NAME} ]; then
   echo "    -m : enable address sanitizer, build_type need set to Debug"
   echo "    -r : disable rga, use cpu resize image"
   echo "    -j : disable libjpeg to avoid conflicts between libjpeg and opencv"
-  echo "such as: $0 -t rk3568 -a aarch64 -d PPOCR-System"
+  echo "such as: $0 -t rk356x -a aarch64 -d PPOCR-System"
   echo "Note: 'rk356x' represents rk3562/rk3566/rk3568, 'rv1106' represents rv1103/rv1106, 'rv1126' represents rv1109/rv1126"
   echo "Note: 'disable rga option is invalid for rv1103/rv1103b/rv1106"
   echo "Note: 'if you want to use opencv to read or save jpg files, use the '-j' option to disable libjpeg"
