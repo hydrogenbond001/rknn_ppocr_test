@@ -6,7 +6,8 @@ RKNN Model Zoo 是基于 RKNPU SDK 工具链开发的，并提供了当前主流
 
 ## Dependency library installation
 
-`RKNN 模型库` 依赖于 `RKNN-Toolkit2` 进行模型转换。在编译 Android 示例时需要 Android 编译工具链，而在编译 Linux 示例时则需要 Linux 编译工具链。有关这些依赖项的安装
+`RKNN 模型库` 依赖于 `RKNN-Toolkit2` 进行模型转换。在编译 Android 示例时需要 Android 编译工具链，而在编译 Linux 示例时则需要 Linux 编译工具链。rm Android 编译工具链
+
 Linux交叉编译工具链 `gcc-linaro-6.3.1(aarch64)/gcc-arm-8.3(armhf)/armhf-uclibcgnueabihf(armhf for RV1106/RV1103 series)`.
 
 /opt/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu
