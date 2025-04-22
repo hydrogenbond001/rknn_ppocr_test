@@ -55,17 +55,19 @@ if [ -z ${TARGET_SOC} ] || [ -z ${BUILD_DEMO_NAME} ]; then
   exit -1
 fi
 
-if [[ -z ${GCC_COMPILER} ]];then
-    if [[ ${TARGET_SOC} = "rv1106"  || ${TARGET_SOC} = "rv1103" ]];then
-        echo "Please set GCC_COMPILER for $TARGET_SOC"
-        echo "such as export GCC_COMPILER=~/opt/arm-rockchip830-linux-uclibcgnueabihf/bin/arm-rockchip830-linux-uclibcgnueabihf"
-        exit
-    elif [[ ${TARGET_SOC} = "rv1109" || ${TARGET_SOC} = "rv1126" ]];then
-        GCC_COMPILER=arm-linux-gnueabihf
-    else
-        GCC_COMPILER=aarch64-linux-gnu
-    fi
-fi
+# if [[ -z ${GCC_COMPILER} ]];then
+#     if [[ ${TARGET_SOC} = "rv1106"  || ${TARGET_SOC} = "rv1103" ]];then
+#         echo "Please set GCC_COMPILER for $TARGET_SOC"
+#         echo "such as export GCC_COMPILER=~/opt/arm-rockchip830-linux-uclibcgnueabihf/bin/arm-rockchip830-linux-uclibcgnueabihf"
+#         exit
+#     elif [[ ${TARGET_SOC} = "rv1109" || ${TARGET_SOC} = "rv1126" ]];then
+#         GCC_COMPILER=arm-linux-gnueabihf
+#     else
+#         GCC_COMPILER=/usr/bin/aarch64-linux-gnu
+#     fi
+# fi
+
+export GCC_COMPILER=/usr/bin/aarch64-linux-gnu
 echo "$GCC_COMPILER"
 export CC=${GCC_COMPILER}-gcc
 export CXX=${GCC_COMPILER}-g++
